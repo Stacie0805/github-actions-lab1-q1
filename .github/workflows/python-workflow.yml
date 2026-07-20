@@ -8,13 +8,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - uses: checkout@v7
     - name: Set up Python 3.11
       uses: actions/setup-python@v7
       with:
-        python-version: '3.13'
-    
-    - name: Checkout the repository
-      uses: actions/checkout@v7 
+        python-version: 3.11
 
     - name: Install dependencies
       run: |
