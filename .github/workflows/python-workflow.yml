@@ -13,12 +13,10 @@ jobs:
       with:
         python-version: '3.13'
     
-    - name: Upload Requirements Text File
-      uses: actions/upload-artifact@v7
-      with: 
-        name: requirements-text-file
-        path: requirements.txt 
+    - name: Checkout the repository
+      uses: actions/checkout@v7 
 
     - name: Install dependencies
       run: |
         pip install -r requirements.txt
+        ./requirements.txt
