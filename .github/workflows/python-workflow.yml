@@ -1,7 +1,7 @@
 name: CI
 
 on:
-  push:  
+  push
 
 jobs:
   build:
@@ -12,6 +12,12 @@ jobs:
       uses: actions/setup-python@v7
       with:
         python-version: '3.13'
+    
+    - name: Upload Requirements Text File
+      uses: actions/upload-artifact@v7
+      with: 
+        name: requirements-text-file
+        path: requirements.txt 
 
     - name: Install dependencies
       run: |
